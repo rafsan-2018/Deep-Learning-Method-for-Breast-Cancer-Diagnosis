@@ -33,10 +33,12 @@ First, you'll need to mount your Google Drive to access the dataset:
 Make sure your dataset is in your Google Drive.
 
 # Mount your Google Drive
-
 from google.colab import drive
-import zipfile
+
+import zipfile 
+
 import os
+
 drive.mount('/content/drive')
 
 
