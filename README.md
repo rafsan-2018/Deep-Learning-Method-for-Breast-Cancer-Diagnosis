@@ -44,17 +44,9 @@ Requirements
 Hardware: Tesla T4 GPU.
 Software: TensorFlow/Keras, Python libraries (Numpy, OpenCV, etc.).
 Getting Started
-Clone the repository and install dependencies:
-Copy code
-git clone <repo-url>
-cd project-folder
-pip install -r requirements.txt
 Train the model:
-Copy code
 python train.py
 Evaluate the model:
-Copy code
 python evaluate.py
 Generate Grad-CAM heatmaps:
-Copy code
 python grad_cam.py
