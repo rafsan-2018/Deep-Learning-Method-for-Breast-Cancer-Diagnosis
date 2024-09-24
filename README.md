@@ -1,52 +1,31 @@
-Breast Cancer Segmentation Using UNET and Attention UNET
-
-Project Overview
-This project develops deep learning models for segmenting breast cancer in ultrasound images using UNET and Attention UNET architectures. The goal is to identify benign and malignant tumors to improve early diagnosis. The dataset used is the Breast Ultrasound Images dataset from Kaggle (2020).
-
-Model Architecture
-1. UNET Model
-UNET is a CNN-based model for image segmentation, using an encoder-decoder structure to capture both spatial and semantic information, producing binary masks that segment tumor regions.
-
-2. Attention UNET Model
-This model enhances UNET with attention mechanisms, helping focus on key image regions. This improves segmentation accuracy, especially for small or hard-to-detect tumors.
-
-3. Grad-CAM for Explainability
-Grad-CAM generates visual heatmaps to highlight areas that influenced the model’s predictions, improving transparency and aiding clinical interpretation.
-
-Dataset
-Source: Breast Ultrasound Images (Kaggle, 2020).
-Images: 780 PNG images, categorized as normal, benign, and malignant.
-Split: 70% training, 20% validation, 10% test.
-Data Preprocessing
-Mask Combination: Benign and malignant tumor masks are merged for each image.
-Data Augmentation:
-Resizing: 256x256 pixels
-Rotation, flipping, zooming, and shearing to increase variability.
-Model Training
-Loss Functions: Binary Cross-Entropy and Dice Loss.
-Optimizer: Adam.
-Training: 60 epochs, batch size of 6.
-Hardware: Tesla T4 GPU.
-Evaluation Metrics
-
-Dice Coefficient: Measures overlap between predicted and ground-truth masks.
-
-Intersection Over Union (IOU): Evaluates segmentation accuracy.
-Challenges
-
-TensorFlow Issues: Addressed by code adjustments for compatibility.
-
-Image-Mask Misalignment: Solved using the natsort Python library.
-
-Slow CPU Training: Resolved by using GPU resources in Google Colab.
+Overview
+This project uses UNET and Attention UNET models for breast cancer tumor segmentation in ultrasound images.
 
 Requirements
-Hardware: Tesla T4 GPU.
-Software: TensorFlow/Keras, Python libraries (Numpy, OpenCV, etc.).
-Getting Started
-Train the model:
-python train.py
-Evaluate the model:
-python evaluate.py
-Generate Grad-CAM heatmaps:
-python grad_cam.py
+Hardware
+Tesla T4 GPU (or similar)
+Software
+TensorFlow/Keras
+Python 3.x
+Required libraries: Numpy, OpenCV, Sklearn, Seaborn, Matplotlib
+
+install necessaries libraries
+
+!pip install natsort
+!pip install livelossplot
+!pip install lime
+
+Dataset
+Dataset: Breast Ultrasound Images (Kaggle, 2020)
+Download and place the dataset in the data/ directory. 
+
+Steps to Run the Project in Google Colab
+Set Up Google Drive
+First, you'll need to mount your Google Drive to access the dataset:
+
+2. Upload the Dataset
+Make sure your dataset is in your Google Drive. If your dataset is in a zip file, you can extract it
+
+Notes
+Ensure that the dataset is properly uploaded and extracted before running the preprocessing step.
+You can access your results and saved models directly from Google Drive.
