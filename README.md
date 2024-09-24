@@ -37,7 +37,6 @@ Make sure your dataset is in your Google Drive.
 from google.colab import drive
 import zipfile
 import os
-# Mount Google Drive to the specified directory '/content/drive'
 drive.mount('/content/drive')
 
 
